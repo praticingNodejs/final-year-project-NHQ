@@ -1,0 +1,234 @@
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI'; font-size: 12px;">
+    <% if(locals.downloadPdf) { %>
+    <h1>Consent Notification</h1>
+    <table width="50%" style="border-style: none;">
+        <tr style="border-style: none">
+            <td style="padding: 5 5 5 5;">
+                <div>
+                    <b>
+                        Candidate Name:
+                    </b>
+                </div>
+            </td>
+            <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                <div>
+                    <%=candidateName%>
+                </div>
+            </td>
+        </tr>
+        <tr style="border-style: none">
+            <td style="padding: 5 5 5 5;">
+                <div>
+                    <b>
+                        Sent On:
+                    </b>
+                </div>
+            </td>
+            <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                <div>
+                    <%=sentOn%>
+                </div>
+            </td>
+        </tr>
+        <tr style="border-style: none">
+            <td style="padding: 5 5 5 5;">
+                <div>
+                    <b>
+                        Email Id(s):
+                    </b>
+                </div>
+            </td>
+            <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                <div>
+                    <%=email%>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <% } %>
+
+    <% if (locals.downloadPdf) { %>
+    <table style="padding-top: 10px; width: 100%;">
+        <% } else { %>
+        <table width="800" style="border:solid #aaa 1.0pt;">
+            <% } %>
+            <tr>
+                <td colspan="4">
+                    <div style="padding: 10px;"><%=candidateFirstName%></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div style="padding-left: 10px;padding-right: 10px; text-align: center;">
+                        <div>THANK YOU FOR APPLYING TO OUR COMPANY</div>
+                        <div>
+                            YOUR PROFILE HAS BEEN PRESENTED FOR THE PURPOSE OF THIS APPLICATION
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Hiring Department:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 10 5 5 5; padding-left: 20px; width: 300px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=projectName%> <%=website%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Name Of Applicant:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 10 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=candidateName%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Position Applied:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=position%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Job Location:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=workCountry%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Working Hours:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=workWeekHours%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Type Of Hire:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=typeOfHiring%> - <%=contractDuration%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Your Expected Salary:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=expCurrency%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Your Availability:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=availability%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;">
+                        <b>
+                            Remarks:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=remark%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;">
+                    <div style="text-align:right; padding-right: 20px;vertical-align: top;">
+                        <b>
+                            Important Note:
+                        </b>
+                    </div>
+                </td>
+                <td style="padding: 5 5 5 5; padding-left: 20px; width: 150px;" colspan="3">
+                    <div style="text-align:left;">
+                        <%=note%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;" colspan="4">
+                    <div style=" font-weight:700;text-align:center;padding-top: 10px">
+                        <b>
+                            Privacy And Confidentiality Policy:
+                        </b>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5 5 5 5;" colspan="4">
+                    <div style="text-align: center;">
+                        <%=policy%>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-size: 13px; padding-top: 15px; text-align: center;">
+                    Sent via Bluebox | <a href="<%=portalUrl%>" style="color: green; text-decoration: none;">Learn More</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div style="font-size: 14px;"><%-emailSignature%></div>
+</div>

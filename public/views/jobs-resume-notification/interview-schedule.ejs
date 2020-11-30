@@ -1,0 +1,216 @@
+<table width="900"
+    style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';border:1px solid #000">
+    <tbody>
+        <tr>
+            <td style="padding: 10 0 10 20px" colspan="4">
+                <div style="padding: 10 0 10 20px">Dear <%=candidateFirstName%>,</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div style="text-align:center;padding:3px 6px;font-size:14px;font-weight:bold">
+                    INTERVIEW SCHEDULE
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Name of Applicant:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=name%> - Ref: <%=resumeRef%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Position Applied:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=position%> - Ref: <%=jobRef%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Job Location:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=jobLocation%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Working Hours:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=workingHour%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Type of Hire:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=typeOfHire%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Your Expected Salary:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=expectedSalary%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Your Availability:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=availability%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle;">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Mode Of Interview:
+                </div>
+            </td>
+            <td style="vertical-align:middle;  padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=interviewMode%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Date & Time of interview:
+                </div>
+            </td>
+            <td style="vertical-align:middle;  padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=interviewDate%>
+                </div>
+            </td>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Venue Of Interview:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=projectName !== '-' ? projectName + ',' + address : address%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Person To See:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=personName !== '-' ? personName + ', ' : ''%>
+                    <%=personDesignation !== '-' ? personDesignation + ', ' : ''%>
+                    <%=personTel%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold">
+                    Interviewer:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%=interviewerName !== '-' ? interviewerName + ', ' : ''%>
+                    <%=interviewerDesignation !== '-' ? interviewerDesignation + ', ' : ''%>
+                    <%=interviewerTel%>
+                </div>
+            </td>
+        </tr>
+        <tr style="display:contents">
+            <td style="display:block;width:230px;">
+                <div style="text-align:right;padding:3px 6px;font-size:14px;font-weight:bold;float: right;">
+                    Job Description:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;display: revert" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;padding:3px 6px;font-size:14px;">
+                    <%-jobRequirement%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:top">
+                <div style="text-align:right;padding:0px 6px;font-size:14px;font-weight:bold">
+                    Documents to bring:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;font-size:14px;display:inline-table">
+                     <%-document%>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:top">
+                <div style="text-align:right;padding:0px 6px;font-size:14px;font-weight:bold">
+                    Remarks:
+                </div>
+            </td>
+            <td style="vertical-align:middle; padding-left: 20px;" colspan="3">
+                <div style="text-transform:capitalize;text-align:left;font-size:14px;display:inline-table">
+                    <%=remarks%>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:230px;vertical-align:middle" colspan="3">
+                <div style="text-align: center;font-size: 12px; padding-top: 25px; padding-bottom: 15px">
+                    Sent via Bluebox | <a href="<%=portalUrl%>" style="color: green; text-decoration: none;">Learn More</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <span>
+        <img height="70" src="<%=companyImage%>">
+    </span>
+</div>
+<br>
+<div><%-emailSignature%></div>

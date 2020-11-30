@@ -1,0 +1,251 @@
+<style>
+    /**
+    * Print stylesheet for yourwebsite.com
+    * @version         1.0
+    * @lastmodified    16.06.2016
+    */
+    .container {
+            font-size: 12px;
+            font-variant: tabular-nums;
+            /* to centre page on screen*/
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+        }
+
+    header {
+        width: 100%;
+        font-size: 12px;
+        font-variant: tabular-nums;
+        line-height: 1.5;
+        /* to centre page on screen*/
+        /* margin-left: auto;
+        margin-right: auto; */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    }
+
+    header {
+        margin: 10px;
+        max-width: 100%;
+        position: running(header);
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .company-container {
+        margin: 10px;
+        padding: 5px;
+        font-size: 12px;
+        margin-top: 10px;
+        border: 1px solid black;
+        max-width: 100%
+    }
+
+    .company-info {
+        text-align: center
+    }
+
+    .font-bold {
+        font-weight: 550
+    }
+
+    .data-protection-container {
+        padding: 5px;
+        font-size: 12px;
+        margin-top: 10px;
+        border: 1px solid black;
+        margin: 10px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .img {
+        max-width: 100%
+    }
+
+    .font-super-small {
+        font-size: 10px
+    }
+
+    .main-info {
+        margin: 10px;
+        width: 98%;
+    }
+
+    .main-info-field {
+        font-size: 14px;
+        font-weight: 550;
+        width: 40%;
+        padding-top: 10px;
+    }
+
+    .main-info-content {
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .main-info-container {
+        margin: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section-heading {
+        text-decoration: underline;
+    }
+
+    .contact-person {
+        line-height: 1.5
+    }
+
+    @media print {
+        .pagebreak {
+            clear: both;
+            page-break-after: always;
+        }
+
+
+    }
+
+    tr {
+        padding-bottom: 10px;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .mb-4,
+    .my-4 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .mr-auto,
+    .mx-auto {
+        margin-right: auto !important;
+    }
+
+    .ml-auto,
+    .mx-auto {
+        margin-left: auto !important;
+    }
+
+    .pan-item {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        position: relative;
+        cursor: default;
+
+    }
+
+    .pan-thumb {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        transform-origin: 95% 40%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .label-info[data-v-c3b13cc0] {
+        color: #a6a6a6;
+    }
+
+    .label-info[data-v-c3b13cc0]::after {
+        content: ":";
+        position: relative;
+        top: -0.5px;
+        margin: 0 8px 0 2px;
+    }
+
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .img-container {
+        text-align: center;
+    }
+
+    .border {
+        padding: 10px;
+        border: 1px solid #2278DA;
+    }
+
+    .no-border-left-right {
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .container {
+        font-size: 0;
+        /*remove white space*/
+    }
+
+    .section {
+        padding: 10px;
+        border: 1px solid #2278DA;
+        text-align: center;
+        align-items: center;
+        flex-basis: 33%;
+        text-transform: uppercase;
+
+        height: 55px;
+        font-size: 12px;
+
+        vertical-align: baseline;
+        box-sizing: border-box;
+    }
+
+    .section img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .container {
+        width: 88%;
+        margin: auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+</style>
+<div class="container">
+    <div class="section" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';">
+        <% if(locals.showCompanyLogo) { %>
+            <img src="<%=companyLogo%>" alt="logo" />
+        <% } else { %>
+            <div><%=firstName%> <%=lastName%></div>
+        <% } %>
+    </div>
+    <div class="section no-border-left-right" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';">
+        <div style="font-size: 10px"><%=date%></div>
+        <div style="font-size: 10px">Page
+            <span class="pageNumber"></span>/<span class="totalPages"></span></div>
+    </div>
+    <div class="section" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';">
+        <div style="font-size: 10px">Resume Ref: <%=refNo%>
+        </div>
+
+        <% if(locals.jobRef) { %>
+        <div style="font-size: 10px">Job Ref: <%=jobRef%></div>
+        <% } %>
+    </div>
+</div>

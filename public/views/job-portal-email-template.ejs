@@ -1,0 +1,112 @@
+<div style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI'; font-size:16px;line-height:1.5;">
+    <div
+        style="box-sizing:border-box;display:block;max-width:800px;margin:0 auto;padding:10px;border: 1px solid #003e84">
+        <table style="box-sizing:border-box;width:100%;border-spacing:0;border-collapse:separate!important"
+            width="100%">
+        </table>
+        <table style="box-sizing:border-box;width:100%;border-spacing:0;border-collapse:separate!important"
+            width="100%">
+            <tr>
+                <td
+                    style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;vertical-align:top;padding:30px">
+                    <table style="box-sizing:border-box;width:100%;border-spacing:0;border-collapse:separate!important"
+                        width="100%">
+                        <tr>
+                            <td style="box-sizing:border-box;padding:0;font-size:16px;vertical-align:top">
+                                <div style="box-sizing:border-box">
+                                    <h2
+                                        style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';margin:0;margin-bottom:30px;color:#212529!important">
+                                        Dear <%=firstName%>,</h2>
+                                    <% if(Object.keys(loginCredentials).length != 0) { %>
+                                    <p
+                                        style="margin:0;margin-bottom:30px;color:#212529;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;text-align: center;">
+                                        Welcome to Bluebox, a cloud-based
+                                        Recruitment Management Solution. You are
+                                        registered with Bluebox as a CRMS for
+                                        Fast Flow Systems Ple Ltd.
+                                    </p>
+                                    <div
+                                        style="color: #212529;text-align: center;margin:0 0 16px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;">
+                                        <div style="color: #212529;margin: 6 0;">
+                                            Your account login detail are as
+                                            follows:</div>
+                                        <div style="color: #212529;margin: 6px 0;text-decoration: none !important;">
+                                            <b>Login ID:
+                                            </b><%= loginCredentials.email %>
+                                        </div>
+                                        <% if(Object.keys(urls).length != 0) { %>
+                                        <div style="color: #212529;margin: 8px 0 0;">
+                                            Bluebox Recruiter URL:
+                                            <%= urls.blueboxRecruiterUrl %>
+                                        </div>
+                                        <div style="color: #212529;margin: 6px 0;">
+                                            Job Portal URL:
+                                            <%= urls.jobPortalUrl %>
+                                        </div>
+                                        <% } %>
+                                    </div>
+                                    <% } else { %>
+                                    <p
+                                        style="margin:0;margin-bottom:30px;color:#212529;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;">
+                                        <%= p1 %></p>
+                                    <p
+                                        style="margin:0;margin-bottom:30px;color:#212529;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;">
+                                        <%= p2 %></p>
+                                    <p
+                                        style="margin:0;margin-bottom:30px;color:#212529;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px; text-align: left;">
+                                        <%= p3 %></p>
+                                    <% } %>
+                                </div>
+                            </td>
+                        </tr>
+                        <% if(btnName != '') { %>
+                        <tr>
+                            <td
+                                style="box-sizing:border-box;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;vertical-align:top">
+                                <div align="center"
+                                    style="box-sizing:border-box;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;vertical-align:top;padding-bottom:15px">
+                                    <div>
+                                        <a href="<%= url %>"
+                                            style="box-sizing:border-box;border-color:#52c100;font-weight:600;text-decoration:none;display:inline-block;margin:0;padding:12px 45px;color:#ffffff;border:solid 1px #52c100;border-radius:2px;font-size:16px;text-transform:capitalize;background-color:#52c100"
+                                            target="_blank"><%= btnName%></a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <tr>
+                            <td
+                                style="box-sizing:border-box;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:16px;vertical-align:top">
+                                <div style="box-sizing:border-box">
+                                    <p
+                                        style="margin: 26px 0 0 0;color:#212529;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';font-size:14px; text-align: center;">
+                                        <%= p4 %>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="font-size: 13px; text-align: center;">
+                    Sent via Bluebox | <a href="<%=portalUrl%>" style="color: green; text-decoration: none;">Learn More</a>
+                </td>
+            </tr>
+        </table>
+        <table
+            style="box-sizing:border-box;width:100%;border-spacing:0;font-size:12px;border-collapse:separate!important"
+            width="100%">
+            <tbody>
+                <tr style="font-size:12px">
+                    <td style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI';vertical-align:top;font-size:12px;text-align:center;padding:20px 0"
+                        align="center">
+                        <p style="margin:0;color:#212529;font-size:12px;margin-bottom:5px">
+                            © BlueBox Pte Ltd.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

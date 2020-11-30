@@ -1,0 +1,420 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /**
+        * Print stylesheet for yourwebsite.com
+        * @version         1.0
+        * @lastmodified    16.06.2016
+        */
+
+        body {
+            width: 90%;
+            font-size: 12px;
+            font-variant: tabular-nums;
+            /* to centre page on screen*/
+            margin-left: auto;
+            margin-right: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+        }
+
+        header {
+            margin: 10px;
+            max-width: 100%;
+            position: running(header);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .company-container {
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            margin-top: 10px;
+            border: 1px solid #2278DA;
+            max-width: 100%
+        }
+
+        .company-info {
+            text-align: center
+        }
+
+        .font-bold {
+            font-weight: 550
+        }
+
+        .data-protection-container {
+            padding: 5px;
+            font-size: 12px;
+            margin-top: 10px;
+            border: 1px solid #2278DA;
+            margin: 10px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .img {
+            max-width: 100%
+        }
+
+        .font-super-small {
+            font-size: 10px
+        }
+
+        .main-info {
+            margin: 0 10 0 10px;
+            width: 98%;
+        }
+
+        .main-info-field {
+            font-size: 14px;
+            font-weight: 550;
+            width: 280px;
+            padding-top: 10px;
+            line-height: 2;
+
+        }
+
+        .main-info-content {
+            font-size: 14px;
+            text-align: justify;
+
+        }
+
+        .main-info-container {
+            margin: 0 10 0 10px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .section-heading {
+            text-decoration: underline;
+            margin-bottom: 5px
+        }
+
+        .contact-person {
+            line-height: 1.5
+        }
+
+        @media print {
+            .pagebreak {
+                clear: both;
+                page-break-after: always;
+            }
+        }
+
+        tr {
+            padding-bottom: 10px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .mb-4,
+        .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .mr-auto,
+        .mx-auto {
+            margin-right: auto !important;
+        }
+
+        .ml-auto,
+        .mx-auto {
+            margin-left: auto !important;
+        }
+
+        .pan-item {
+            display: inline-block;
+            position: relative;
+            cursor: default;
+        }
+
+        .pan-thumb {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            transform-origin: 95% 40%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .label-info[data-v-c3b13cc0] {
+            color: #a6a6a6;
+        }
+
+        .label-info[data-v-c3b13cc0]::after {
+            content: ":";
+            position: relative;
+            top: -0.5px;
+            margin: 0 8px 0 2px;
+        }
+
+        .col-md-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .img-container {
+            text-align: center;
+        }
+
+        .border {
+            padding: 10px;
+            border: 1px solid #2278DA;
+        }
+
+        .no-border-left-right {
+            border-left: none !important;
+            border-right: none !important;
+        }
+
+        .header-item {
+            padding: 10px;
+            border: 1px solid #2278DA;
+            text-align: center;
+            align-items: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            height: 55px;
+            vertical-align: baseline;
+            line-height: 25px;
+        }
+
+        .header-item img {
+            max-width: 150px;
+        }
+
+        .header-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="company-container">
+        <div class="company-info">
+            <div class="font-bold" style="font-size: 16px;"><%=companyName%></div>
+            <div style="font-size: 12px;">Co Reg No : <%= regNo %></div>
+            <!--<div style="font-size: 12px;">Employment Agency No : <%= agencyNo %></div>-->
+            <div style="font-size: 12px;"><%=website%></div>
+        </div>
+    </div>
+    </div>
+    <div class="data-protection-container">
+        <div class="font-bold">Data protection</div>
+        <div class="font-super-small">
+            <%=companyDataProtection%>
+        </div>
+    </div>
+    <div class="main-info-container" style="padding-top:3px;">
+        <% if (showImageInPdf) { %>
+        <% if(avatar) { %>
+        <div class="pan-item mx-auto" style="z-index: 1; display: flex; justify-content: center;">
+            <img src="<%=avatar%>" style="height: 150px;
+            width: 150px; border-radius: 50%; border: 1px solid #e1e1e1" alt="avatar" />
+        </div>
+        <% } else { %>
+        <div class="pan-item mx-auto" style="z-index: 1; display: flex; justify-content: center;">
+            <div
+                style="text-transform: uppercase;display: flex; width: 150px; height: 150px; border-radius: 50%; font: 60px / 150px Helvetica, Arial, sans-serif; align-items: center; justify-content: center; text-align: center; user-select: none; background-color: rgb(139, 195, 74); color: rgb(219, 255, 154);" />
+            <span> <%=shortName%> </span>
+        </div>
+    </div>
+    <% } %>
+    <% } %>
+    <table class="main-info">
+        <% if(locals.position) { %>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">
+                <div class="font-bold" style="font-size: 14px; padding-top: 5px; font-weight: 700;">
+                    Position Applied for:
+                </div>
+            </td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=position%></td>
+        </tr>
+
+        <% } %>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Name:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=name%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Nationality:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=nationality%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Country of Residence:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=countryOfResidence !== '-' ? countryOfResidence + ', ' + sgpResidentStatus : sgpResidentStatus%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Age:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=age%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Availability:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=availability%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Highest Qualification:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=education%></td>
+        </tr>
+        <tr>
+        <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;"></td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=instNameLoc%> - <%=gradYear%></td>
+        </tr>
+        <tr>
+            <td class="main-info-field" style="padding-top: 0px;padding-bottom: 0px;">Expected Salary:</td>
+            <td class="main-info-content" style="padding-top: 0px;padding-bottom: 0px;"><%=expSalaryCurrency%></td>
+        </tr>
+    </table>
+    </div>
+    <div class="main-info-container" style="padding-top:3px;">
+        <h3 class="section-heading">QUALIFICATIONS AND OTHER CERTIFICATIONS/TRAININGS:</h3>
+        <div class="main-info-content" style="padding-left: 10px;"><%-otherQualifications%></div>
+    </div>
+    <div class="main-info-container" style="padding-top:3px;">
+        <h3 class="section-heading">CAREER SUMMARY / PROJECT EXPERIENCE</h3>
+        <table class="main-info">
+            <% if (sectors.length === 0 ) { %>
+            <tr>
+                <td  style="padding-top: 0px;" class="main-info-field">Specialty Projects: </td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content">-</td>
+            </tr>
+            <% } else { %>
+            <% for (let i = 0; i < sectors.length; i++) { %>
+            <tr>
+                <td style="padding-top:0px" class="main-info-field">
+                    <% if(i === 0) { %>
+                    Specialty Projects:
+                    <% } %>
+                </td>
+                <% if (sectors[i].name) {  %>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content"><%=sectors[i].name%></td>
+                <% } else { %>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content"> - </td>
+                <% } %>
+            </tr>
+            <% } %>
+            <% } %>
+            <tr>
+                <td style="display: table-row;" class="main-info-field">Total Years Of Working Experience:</td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content">
+                    <%=workExpTotal%></td>
+            </tr>
+        </table>
+        <div style="padding-top: 4px;padding-bottom: 0px;" class="main-info-content" style="padding-left: 10px;"><%-careerSummary%></div>
+    </div>
+    <div class="main-info-container" style="padding-top:3px;">
+        <h3 class="section-heading">ACHIEVEMENTS AND OTHERS (IF ANY)</h3>
+        <div style="padding-top: 4px;padding-bottom: 0px;" class="main-info-content" style="padding-left: 10px;;"><%-achievements%></div>
+    </div>
+    <div class="main-info-container" style="padding-top:3px;">
+        <h3 class="section-heading">EMPLOYMENT HISTORY</h3>
+        <% for(let i = 0; i < workExperiences.length; i++) { %>
+        <table class="main-info">
+            <% if (i === 0) { %>
+            <tr>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-field">Current / Last Employment Status:</td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content"><%=empStatus%></td>
+            </tr>
+            <% } %>
+
+            <tr>
+                <td style="display: inline-table;margin-top: 0px" class="main-info-field" style="width: 40%!important;">Company: </td>
+                <td style="padding-top:3px;padding-bottom: 0px;" class="main-info-content">
+                    <div style="padding-top: 3px;">
+                    <% if(workExperiences[i].company) { %>
+                    <%=workExperiences[i].company%>
+                    <% } else { %>
+                    -
+                    <% } %>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="display: inline-table;" class="main-info-field" style="width: 40%!important;">Period:</td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content">
+                    <% if(workExperiences[i].periodFrom) { %>
+                    <b><%=workExperiences[i].periodFrom%></b>
+                    <% } else { %>
+                    -
+                    <% } %>
+
+                    To
+
+                    <% if(workExperiences[i].presentDate) { %>
+                    <b>Now</b>
+                    <% } else if (workExperiences[i].periodTo) { %>
+                    <b><%=workExperiences[i].periodTo%></b>
+                    <% } else { %>
+                    -
+                    <% } %>
+                </td>
+            </tr>
+            <tr>
+                <td style="display: inline-table;" class="main-info-field" style="width: 40%!important;">Position:</td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content">
+                    <% if(workExperiences[i].position) { %>
+                    <%-workExperiences[i].position%>
+                    <% } else { %>
+                    -
+                    <% } %>
+                </td>
+            </tr>
+            <tr>
+                <td style="display: inline-table;" class="main-info-field" style="width: 40%!important;">Duties/Responsibilities:</td>
+            </tr>
+            <tr>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content" colspan="3">
+                    <% if(workExperiences[i].duties) { %>
+                    <%-workExperiences[i].duties%>
+                    <% } else { %>
+                    -
+                    <% } %>
+                </td>
+            </tr>
+        </table>
+        <hr style="width: 90%; color:beige; font-weight: 550;" />
+        <% } %>
+        <table class="main-info">
+            <tr>
+                <td style="padding-top:0px" class="main-info-field"></td>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content"></td>
+            </tr>
+            <tr>
+                <td style="display: inline-table;" class="main-info-field">Past Employment History:</td>
+            </tr>
+            <tr>
+                <td style="padding-top: 0px;padding-bottom: 0px;" class="main-info-content" colspan="3">
+                    <%-pastEmploymentHistory%>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

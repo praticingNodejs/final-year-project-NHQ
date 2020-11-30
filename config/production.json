@@ -1,0 +1,58 @@
+{
+    "host": "localhost",
+    "port": 3030,
+    "public": "../public/",
+    "paginate": {
+        "default": 10
+    },
+    "authentication": {
+        "entity": "user",
+        "service": "users",
+        "secret": "G0DmIO4MgI/wgWgy0viW94XjKIk=",
+        "authStrategies": [
+            "jwt",
+            "local",
+            "aspMembership"
+        ],
+        "jwtOptions": {
+            "header": {
+                "typ": "access"
+            },
+            "audience": "https://yourdomain.com",
+            "issuer": "feathers",
+            "algorithm": "HS256",
+            "expiresIn": "2h"
+        },
+        "local": {
+            "usernameField": "email",
+            "passwordField": "password"
+        },
+        "aspMembership": {
+            "usernameField": "email",
+            "passwordField": "password"
+        },
+        "oauth": {
+            "redirect": "/",
+            "auth0": {
+                "key": "<auth0 oauth key>",
+                "secret": "<auth0 oauth secret>",
+                "subdomain": "<auth0 subdomain>"
+            },
+            "google": {
+                "key": "...",
+                "secret": "...",
+                "scope": [
+                    "email",
+                    "profile",
+                    "openid"
+                ],
+                "successRedirect": "/"
+            },
+            "facebook": {
+                "key": "...",
+                "secret": "..."
+            }
+        }
+    },
+    "postgres": "postgres://localhost:5432/Greenwich"
+}
